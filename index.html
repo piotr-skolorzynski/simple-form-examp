@@ -14,8 +14,34 @@
 
     <div class="container">
         <h1>Umów wizytę lub konsultacje</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit qui tenetur vel. Quia nulla quasi, amet modi quibusdam, magnam consectetur cupiditate autem repudiandae recusandae id, hic molestias molestiae. Placeat, voluptatem.</p>
+        <form action="./sent.html" method="post" target="_blank" name="form-reserve-consultation">
+            <label for="fname">Imię:</label>
+            <input type="text" id="fname" placeholder="wpisz imię pacjenta ..." required>
+            <label for="lname">Nazwisko:</label>
+            <input type="text" id="lname" placeholder="wpisz nazwisko pacjenta ..." required>
+            <label for="pesel">PESEL:</label>
+            <input type="number" name="" id="pesel">
+            <label for="email">Email:</label>
+            <input type="email" name="" id="email">
+            <label for="comments">Dodatkowe uwagi:</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <label for="datetime">Podaj datę konsultacji:</label>
+            <input type="datetime-local" name="" id="datetime">
+            <fieldset>
+                <legend> Wybierz rodzaj wizyty </legend>
+                <label for="contact">Konsultacja w placówce:</label> 
+                <input type="radio" name="visits" id="contact" value="contact">
+                <label for="phone">Konsultacja telefoniczna:</label>
+                <input type="radio" name="visits" id="phone" value="phone">
+            </fieldset>
+        </form>
+        <button type="submit">Umów wizytę</button> 
+        <!-- dokończ button submit, przypomnij sobie jak się robi z przyciskiem type submit poza formularzem -->
     </div>
+
+
+
+
     
 </body>
 </html>

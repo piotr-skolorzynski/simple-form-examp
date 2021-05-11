@@ -6,9 +6,15 @@ body {
     margin: 3rem auto;
     padding: 0 2rem;
     max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 1px solid black;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+form {
+    margin: 2rem 0;
+    font-size: 1.6rem;
 }
