@@ -13,39 +13,20 @@
 <body>
 
     <div class="container">
-        <h1>Umów wizytę lub konsultacje telefoniczną</h1>
-        <form action="./sent.html" method="POST" target="_blank" name="form-reserve-consultation" class="form">
-            <div class="form-item">
-                <label for="fname">Imię:</label>
-                <input type="text" id="fname" name="fname" placeholder="wpisz imię pacjenta ..." required>
-            </div>
+        <h1>Umów wizytę lub konsultację telefoniczną</h1>
+        <form action="#" method="POST" name="form-reserve-consultation" class="form">
+            <input type="text" id="fname" name="fname" placeholder="imię" aria-label="imię" class="form-input"  required>
 
-            <div class="form-item">
-                <label for="lname">Nazwisko:</label>
-                <input type="text" id="lname" name="lname" placeholder="wpisz nazwisko pacjenta ..." required>
-            </div>
+            <input type="text" id="lname" name="lname" placeholder="nazwisko"  class="form-input" aria-label="nazwisko" required>
 
-            <div class="form-item">
-                <label for="pesel">PESEL:</label>
-                <input type="number" name="pesel" id="pesel">
-            </div>
+            <input type="number" name="pesel" placeholder="pesel" id="pesel" class="form-input" aria-label="pesel" required>
 
-            <div class="form-item">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">   
-            </div>
+            <input type="email" name="email" id="email" placeholder="email" class="form-input" required>   
             
-            <div class="form-item">
-                <label for="comments">Dodatkowe uwagi:</label>
-                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-            </div>
+            <input type="datetime-local" name="datetime-local" id="datetime-local" class="form-input" required>
+
             
-            <div class="form-item">
-                <label for="datetime">Podaj datę konsultacji:</label>
-                <input type="datetime-local" name="datetime" id="datetime">
-            </div>
-            
-            <fieldset>
+            <fieldset class="form-fieldset">
                 <legend> Wybierz rodzaj wizyty </legend>
                 <label for="contact">Konsultacja w placówce:</label> 
                 <input type="radio" name="visits" id="contact" value="contact">
@@ -53,8 +34,10 @@
                 <input type="radio" name="visits" id="phone" value="phone">
             </fieldset>
 
+            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Wpisz dodatkowe pytania" aria-label="Wpisz dodatkowe pytania"></textarea>
+
+            <button type="submit" class="form-button">Umów wizytę</button> 
         </form>
-        <button type="submit" form="form-reserve-consultation">Umów wizytę</button> 
     </div>
 
     
