@@ -19,22 +19,26 @@
 
             <input type="text" id="lname" name="lname" placeholder="nazwisko"  class="form-input" aria-label="nazwisko" required>
 
-            <input type="number" name="pesel" placeholder="pesel" id="pesel" class="form-input" aria-label="pesel" required>
+            <input type="text" name="pesel" placeholder="pesel" id="pesel" class="form-input" aria-label="pesel" pattern="[0-9]{11}" required>
 
             <input type="email" name="email" id="email" placeholder="email" class="form-input" required>   
             
-            <input type="datetime-local" name="datetime-local" id="datetime-local" class="form-input" required>
+            <input type="datetime-local" name="visit-time" id="visit-time" class="form-input" required>
 
             
             <fieldset class="form-fieldset">
-                <legend> Wybierz rodzaj wizyty </legend>
-                <label for="contact">Konsultacja w placówce:</label> 
-                <input type="radio" name="visits" id="contact" value="contact">
-                <label for="phone">Konsultacja telefoniczna:</label>
-                <input type="radio" name="visits" id="phone" value="phone">
+                <legend> Wybierz rodzaj konsultacji </legend>
+                <div>
+                    <label for="contact">w placówce</label> 
+                    <input type="radio" name="visits" id="contact" value="contact">
+                </div>
+                <div>
+                    <label for="phone">telefoniczna</label>
+                    <input type="radio" name="visits" id="phone" value="phone">
+                </div>
             </fieldset>
 
-            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Wpisz dodatkowe pytania" aria-label="Wpisz dodatkowe pytania"></textarea>
+            <textarea name="comments" id="comments" cols="43" rows="5" placeholder="Wpisz dodatkowe pytania" aria-label="Wpisz dodatkowe pytania" class="form-textarea"></textarea>
 
             <button type="submit" class="form-button">Umów wizytę</button> 
         </form>
